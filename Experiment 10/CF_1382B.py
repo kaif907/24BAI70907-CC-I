@@ -1,0 +1,24 @@
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+    a = list(map(int, input().split()))
+
+    ones = 0
+
+    for x in a:
+        if x == 1:
+            ones += 1
+        else:
+            break
+
+    if ones == n:
+        if n % 2 == 1:
+            print("First")
+        else:
+            print("Second")
+    else:
+        if ones % 2 == 0:
+            print("First")
+        else:
+            print("Second")
